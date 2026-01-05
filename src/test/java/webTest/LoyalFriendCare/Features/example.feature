@@ -7,3 +7,7 @@ Feature:
 
     Scenario:
       Given Kullanici "queryCart" sitesini Android gorunumunde acar
+
+    @fullSİze
+    Scenario:
+      Given user "loyalfriend" sitesine gider

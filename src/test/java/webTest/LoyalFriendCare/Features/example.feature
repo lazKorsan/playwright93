@@ -11,3 +11,9 @@ Feature:
     @fullSİze
     Scenario:
       Given user "loyalfriend" sitesine gider
+
+
+      @screenShots
+    Scenario:
+      Given user "loyalfriend" sitesine gider
+      Then Kullanici elementlerin resmini alir

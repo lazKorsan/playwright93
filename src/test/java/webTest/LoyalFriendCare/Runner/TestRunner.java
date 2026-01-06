@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/webTest/LoyalFriendCare/Features",
         glue = "webTest/LoyalFriendCare/Stepdefinitions",
-        tags = "@fullSİze",
+        tags = "@screenShots",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber.html",

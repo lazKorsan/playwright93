@@ -1,4 +1,4 @@
-package webTest.TestAutamationPractice.Utilities;
+package Utilities;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;

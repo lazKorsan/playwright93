@@ -1,4 +1,4 @@
-package webTest.LoyalFriendCare.Utilities;
+package Utilities;
 
 import com.microsoft.playwright.*;
 

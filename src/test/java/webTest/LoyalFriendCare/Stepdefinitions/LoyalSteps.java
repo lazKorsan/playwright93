@@ -4,9 +4,9 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import webTest.LoyalFriendCare.Utilities.BrowserUtils;
-import webTest.LoyalFriendCare.Utilities.TakeScreenShotsMultiFunctional;
-import webTest.LoyalFriendCare.Utilities.ViewPortManger;
+import Utilities.BrowserUtils;
+import Utilities.TakeScreenShotsMultiFunctional;
+import Utilities.ViewPortManger;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -54,6 +54,4 @@ public class LoyalSteps {
         // Clean up after test if needed, or rely on @After hook
         // BrowserUtils.tearDown(); // Optional depending on your framework structure
     }
-
-
 }

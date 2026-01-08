@@ -1,7 +1,7 @@
 package webTest.LoyalFriendCare.TestNG;
 
 import org.testng.annotations.Test;
-import webTest.LoyalFriendCare.Utilities.ViewPortManger;
+import Utilities.ViewPortManger;
 
 public class US001 {
 

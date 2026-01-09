@@ -1,6 +1,7 @@
 package Utilities;
 
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.LoadState;
 
 public class BrowserUtils {
 
@@ -211,6 +212,39 @@ public class BrowserUtils {
         } catch (Exception e) {
             System.out.println("❌ Error during teardown: " + e.getMessage());
         }
+    }
+
+    public static void waitForPageLoad(Page page, int timeoutSeconds) {
+        try {
+            // 1. DOM içeriğinin yüklenmesini bekle
+            page.waitForLoadState(LoadState.DOMCONTENTLOADED,
+                    new Page.WaitForLoadStateOptions()
+                            .setTimeout(timeoutSeconds * 1000));
+
+            // 2. Tüm network isteklerinin bitmesini bekle
+            page.waitForLoadState(LoadState.NETWORKIDLE,
+                    new Page.WaitForLoadStateOptions()
+                            .setTimeout(timeoutSeconds * 1000));
+
+            // 3. Sayfanın tamamen yüklenmesini bekle
+            page.waitForLoadState(LoadState.LOAD,
+                    new Page.WaitForLoadStateOptions()
+                            .setTimeout(timeoutSeconds * 1000));
+
+            System.out.println("✓ Sayfa tamamen yüklendi: " + page.url());
+
+        } catch (Exception e) {
+            System.err.println("❌ Sayfa yüklenirken timeout: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    /**
+     * Sayfanın tamamen yüklenmesini bekler (varsayılan timeout: 30 saniye)
+     * @param page Playwright Page objesi
+     */
+    public static void waitForPageLoad(Page page) {
+        waitForPageLoad(page, 30);
     }
 
 }

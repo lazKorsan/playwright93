@@ -2,7 +2,7 @@ package webTest.LoyalFriendCare.TestNG;
 
 import com.microsoft.playwright.Page;
 import org.testng.annotations.Test;
-import webTest.LoyalFriendCare.Utilities.BrowserUtils;
+import Utilities.BrowserUtils;
 
 public class US002Advanced {
 

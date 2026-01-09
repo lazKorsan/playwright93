@@ -1,0 +1,14 @@
+tree /f > project_structure.txt
+
+
+# Tüm testleri çalıştır
+mvn test
+
+# Sadece BrowserWindows testlerini çalıştır
+mvn test -Dcucumber.filter.tags="@BrowserWindows"
+
+# Sadece New Tab testini çalıştır
+mvn test -Dcucumber.filter.tags="@NewTab"
+
+# Parallel çalıştırma
+mvn test -DthreadCount=3

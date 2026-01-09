@@ -15,7 +15,10 @@ import org.testng.annotations.DataProvider;
         },
         monochrome = true,
         //tags = "@BrowserWindows and not @WIP"
-        tags = "@IfarmeBasic",
+        //tags = "@IfarmeBasic",
+        //tags ="@SuccesMessageReusable",
+        tags = "@SuccesMessage",
+
         publish = true,
         dryRun = false
 

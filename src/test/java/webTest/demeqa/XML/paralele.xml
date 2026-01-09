@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" parallel="classes" thread-count="4">
+
+    <test name="DemoQA Parallel Tests">
+        <classes>
+            <class name="webTest.demeqa.Runner.TestRunner"/>
+            <class name="webTest.demeqa.TestNg.US002Iframe"/>
+            <class name="webTest.demeqa.TestNg.US003Succes"/>
+            <class name="webTest.demeqa.TestNg.US004SuccesByReusable"/>
+        </classes>
+    </test>
+
+</suite>

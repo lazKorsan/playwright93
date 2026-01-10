@@ -106,6 +106,8 @@ public class formDoldurmaTesti {
         String finalEndDate = page.getByPlaceholder("End Date").inputValue();
 
         System.out.println("Girilen Başlangıç Tarihi: " + finalStartDate);
+
+
         System.out.println("Girilen Bitiş Tarihi: " + finalEndDate);
 
         // Sonuç elementi varsa yazdır, yoksa hata vermesin
